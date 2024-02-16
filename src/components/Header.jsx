@@ -32,7 +32,7 @@ const Hero = () => {
         {links.map(({ id, title, to }) => (
           <li
             key={id}
-            className=" px-4 cursor-pointer py-6 font-medium text-slate-600 hover:scale-105 duration-300"
+            className=" px-4 cursor-pointer py-4 font-xs text-sm text-slate-600 hover:scale-105 duration-300"
           >
             <a href={to}>{title}</a>
           </li>
@@ -47,7 +47,7 @@ const Hero = () => {
       {nav && (
         <ul className="flex md:hidden flex-col justify-center items-center absolute top-0 left-0 h-screen w-full text-slate-600 bg-white">
           {links.map(({ id, title, to }) => (
-            <li key={id} className="cursor-pointer py-6 font-medium text-xl">
+            <li key={id} className="cursor-pointer py-6 font-sm text-xl">
               <a href={to}>{title}</a>
             </li>
           ))}

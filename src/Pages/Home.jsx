@@ -1,13 +1,17 @@
 import Hero from "../components/Hero";
 import Header from "../components/Header";
 import Benefit from "../components/Benefit";
+import OtherProduct from "../components/OtherProduct";
+import Product from "../components/Product";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-white">
       <Header />
       <Hero />
       <Benefit />
+      <OtherProduct />
+      <Product />
     </div>
   );
 };
