@@ -15,9 +15,11 @@ const Hero = () => {
           From the source to your glass, we are committed to delivering crisp,
           refreshing goodness
         </p>
-        <button className="bg-[#3C1C6C] text-white font-light py-2 px-8 rounded-md hover:scale-105 duration-300">
-          Pay Bills
-        </button>
+        <a href="/Transacton">
+          <button className="bg-[#3C1C6C] text-white font-light py-2 px-8 rounded-md hover:scale-105 duration-300">
+            Pay Bills
+          </button>
+        </a>
       </div>
       <img
         src={white}
