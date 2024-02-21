@@ -1,5 +1,11 @@
+import Chart from "../components/Chart";
+
 const Transactions = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Chart />
+    </div>
+  );
 };
 
 export default Transactions;
