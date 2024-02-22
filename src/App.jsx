@@ -4,6 +4,7 @@ import SignUp from "./Pages/SignUp";
 import LogIn from "./Pages/LogIn";
 import Transactions from "./Pages/Overview";
 import InputTransaction from "./Pages/InputTransaction";
+import Confirm from "./Pages/Confirm";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/login" element={<LogIn />} />
           <Route path="/Transactions" element={<Transactions />} />
           <Route path="/InputTransaction" element={<InputTransaction />} />
+          <Route path="/Confirm" element={<Confirm />} />
         </Routes>
       </BrowserRouter>
     </div>
