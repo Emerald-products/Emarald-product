@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase";
+import { useNavigate } from "react-router-dom";
 
-const InputTransaction = ({ dataValue, onValueChange, onButtonClick }) => {
-  const [changes, setChanges] = useState(false);
+const InputTransaction = ({ dataValue, onValueChange }) => {
+  const navigate = useNavigate();
 
-  const handleClick = () => {
-    setChanges(!changes);
-    onButtonClick(!changes);
+  const handleLogOut = async () => {
+    await signOut(auth);
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/Login");
   };
 
   return (
@@ -25,10 +29,10 @@ const InputTransaction = ({ dataValue, onValueChange, onButtonClick }) => {
         />
       </form>
       <button
-        onClick={handleClick}
+        onClick={handleLogOut}
         className="py-2 px-6 rounded-lg bg-[#3c1c6D] mt-4 text-white"
       >
-        Enter
+        Log out
       </button>
     </div>
   );

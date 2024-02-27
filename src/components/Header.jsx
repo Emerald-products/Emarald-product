@@ -53,12 +53,6 @@ const Hero = () => {
           ))}
         </ul>
       )}
-      <button className="text-sm bg-[#3C1C6C] px-4 py-2 rounded-md text-white hover:scale-105 duration-300">
-        SignUp
-      </button>
-      <button className="text-sm bg-[#3C1C6C] px-4 py-2 rounded-md text-white hover:scale-105 duration-300">
-        LogIn
-      </button>
     </div>
   );
 };

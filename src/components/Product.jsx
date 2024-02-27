@@ -2,7 +2,7 @@ import smoothie from "../assets/smoothie.png";
 
 const Product = () => {
   return (
-    <div className="bg-[#F9B9F2] rounded-xl w-4/5 m-12 flex lg:flex-nowrap justify-between items-center">
+    <div className="bg-[#F9B9F2] rounded-xl m-12 flex lg:flex-nowrap justify-between items-center">
       <div className="py-20">
         <h3 className="text-4xl p-8">
           Sip, Savor, and stay hydrated with our blend of smoothies

@@ -1,84 +1,65 @@
+import { auth } from "../../firebase";
 import people from "../assets/people.png";
-import logo from "../assets/logo.png";
 import { useState } from "react";
+// import { createUserWithEmailAndPassword } from "firebase/app";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
-  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = (e) => {
+
+  const Navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) {
-      alert("Passwords do not match");
-      return;
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      console.log(userCredential);
+      const user = userCredential.user;
+      localStorage.setItem("token", user.accessToken);
+      localStorage.setItem("user", JSON.stringify(user));
+      Navigate("/");
+    } catch (error) {
+      console.log(error);
     }
-    console.log("Submitted:", { fullName, email, password });
+
+    console.log("Submitted:", { email, password });
   };
   return (
-    <div className="p-8 m-4">
+    <div className="flex p-8 m-4">
       <img src={people} alt="" />
-      <div className="flex">
+      <div className="">
         <h1 className="text-3xl text-[#3C1C6C]">Emerald</h1>
       </div>
       <p>Create Admin Account</p>
-      <form onSubmit={handleSubmit} className="w-[50%] gap-4">
-        <label htmlFor="full-name" className="text-[#3B3B3B] text-sm font-thin">
-          Full Name
-        </label>
-        <input
-          id="full-name"
-          type="text"
-          value={fullName}
-          placeholder="John Oseni"
-          onChange={(e) => setFullName(e.target.value)}
-          className="w-full border border-solid border-[#CED4DA] capitalize p-3 rounded-lg text-[#212529]"
-        />
-        <label
-          htmlFor="Email address"
-          className="text-[#3B3B3B] text-sm font-thin"
-        >
-          Email address
-        </label>
+      <form onSubmit={handleSubmit} className="w-full gap-4">
         <input
           id="email"
           type="text"
           value={email}
           placeholder="johndoe@gmail.com"
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full border border-solid border-[#CED4DA] capitalize p-3 rounded-lg text-[#212529]"
+          className="w-full border border-solid border-[#CED4DA] p-3 rounded-lg text-[#212529]"
         />
-        <label
-          htmlFor="Email address"
-          className="text-[#3B3B3B] text-sm font-thin"
-        >
-          Email address
-        </label>
-        <input
-          id="Phone Number"
-          type="number"
-          placeholder="08069xxxx"
-          className="w-full border border-solid border-[#CED4DA] capitalize p-3 rounded-lg text-[#212529] mt-4"
-        />
-        <label
-          htmlFor="Phone Number"
-          className="text-[#3B3B3B] text-sm font-thin"
-        >
-          Create Password
-        </label>
         <input
           id="create password"
-          type="text"
+          type="password"
           value={password}
-          placeholder="xxxxxx"
+          placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
           className="w-full border border-solid border-[#CED4DA] capitalize p-3 rounded-lg text-[#212529] mt-4"
         />
-        <button
-          type="submit"
-          className="bg-[#3C1C6C] text-white font-light py-2 px-10 rounded-lg mt-4 w-full"
-        >
-          Create Account
-        </button>
+        <a href="/LogIn">
+          <button className="bg-[#3C1C6C] text-white font-light py-2 px-10 rounded-lg mt-4 w-full">
+            Create Account
+          </button>
+        </a>
       </form>
     </div>
   );

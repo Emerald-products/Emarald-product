@@ -4,20 +4,11 @@ import { useState } from "react";
 
 const Transactions = () => {
   const [valueChart, setValueChart] = useState(0);
-  const [changes, setChanges] = useState(false);
-
-  const handleButtonClick = (clicked) => {
-    setChanges(clicked);
-  };
 
   return (
     <div>
-      <InputTransaction
-        value={valueChart}
-        onValueChange={setValueChart}
-        onButtonClick={handleButtonClick}
-      />
-      {changes && <Chart dataValue={valueChart} />}
+      <InputTransaction value={valueChart} onValueChange={setValueChart} />
+      <Chart dataValue={valueChart} />
     </div>
   );
 };
