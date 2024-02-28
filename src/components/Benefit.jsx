@@ -18,7 +18,7 @@ const Benefit = () => {
         </p>
       </div>
       <div className="grid md:grid-cols-3 gap-2 px-6 m-4">
-        <div className="rounded-xl shadow-md px-4 py-2">
+        <div className="rounded-xl shadow-md px-4 py-2 hover:scale-105 duration-300">
           <img src={hand} alt="" sizes={20} />
           <h3 className="font-light text-md mt-3 mb-3">Pristine Water</h3>
           <p className="text-xs text-[#d7d7d7] font-semibold mb-6">

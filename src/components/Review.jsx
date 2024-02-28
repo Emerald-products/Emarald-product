@@ -10,14 +10,16 @@ const Review = () => {
       </h1>
       <div className="text-[#232323] text-md px-10 mt-6 grid md:grid-cols-3 gap-4">
         <div className="bg-[#f8f3ff] rounded-lg p-6 ">
-          <p className="mt-4 mb-8">
+          <p className="mt-4 mb-8 flex items-center justify-center">
             Emerald company is the best in the business for quenching every
             thirst with excellence.
           </p>
-          <div className="flex">
+          <div className="flex mt-4 gap-3 font-light">
             <img src={mask} alt="" className="" />
-            <p className="">Naomi wine store</p>
-            <span>A wine store owner</span>
+            <div>
+              <p className="">Naomi wine store</p>
+              <h4>A wine store owner</h4>
+            </div>
           </div>
         </div>
         <div className="bg-[#f8f3ff] rounded-lg p-6">
@@ -25,21 +27,25 @@ const Review = () => {
             Exceptional quality and unparalled veriety! from the purest water to
             a delightful array of drinks, their service set the standard
           </p>
-          <div className="flex">
+          <div className="flex mt-4 gap-3 font-light">
             <img src={kingsley} alt="" className="rounded-[50%]" />
-            <p>Raymond Thusk</p>
+            <div>
+              <p>Raymond Thusk</p>
+              <h4>professional freelancer</h4>
+            </div>
           </div>
-          <h4>professional freelancer</h4>
         </div>
         <div className="bg-[#f8f3ff] rounded-lg p-6">
           <p className="text-[#a8a4ad] mt-4 mb-4"></p>Our team has been working
           at frispes for almost 2 months because our office is still closed.
           During working at frispes, we feel a new experience.
-          <div className="flex mt-2">
+          <div className="flex mt-4 gap-3 font-light">
             <img src={king} alt="" className="rounded-[50%]" />
-            <p>Mr Sanni</p>
+            <div>
+              <p>Mr Sanni</p>
+              <h4>A Freelancer</h4>
+            </div>
           </div>
-          <h4>A Freelancer</h4>
         </div>
       </div>
     </div>
