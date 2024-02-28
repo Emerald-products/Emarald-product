@@ -13,9 +13,9 @@ const InputTransaction = ({ dataValue, onValueChange }) => {
   };
 
   return (
-    <div className="p-4">
-      <h1 className="text-[#232323] font-semibold text-3xl">Hey There!</h1>
-      <h1 className="text-4xl mb-4 text-[#232323]">
+    <div className="p-10 m-4">
+      <h1 className="text-[#3C1C6C] font-semibold text-3xl">Hey There!</h1>
+      <h1 className="text-xl mb-4 text-[#232323]">
         We are glad to have you here!
       </h1>
       <form action="" className="border-gray outline rounded-lg w-[50%]">

@@ -49,7 +49,7 @@ const LogIn = () => {
         </p>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col mt-6 rounded px-8 pt-6 pb-8 mb-4 w-full items-center "
+          className="flex flex-col mt-6 rounded px-8 pt-6 pb-8 mb-4 w-full items-center"
         >
           <label htmlFor="">Email</label>
           <input
@@ -57,7 +57,7 @@ const LogIn = () => {
             value={email}
             onChange={handleUseremailChange}
             placeholder="Email address"
-            className="border-[#D9D9D9] rounded-lg bg-[#D9D9D9] text-xs text-[#232323] py-4 px-20 mb-2"
+            className="border-[#D9D9D9] rounded-lg bg-[#D9D9D9] text-xs text-[#232323] py-4 px-20 mb-2 justify-center items-center"
           />
           <label htmlFor="">Password</label>
           <input
@@ -65,7 +65,7 @@ const LogIn = () => {
             value={password}
             onChange={handlePasswordChange}
             placeholder="Password"
-            className="border-[#D9D9D9] rounded-lg w-full bg-[#D9D9D9] text-xs text-[#232323] py-4 px-20"
+            className="border-[#D9D9D9] rounded-lg w-full bg-[#D9D9D9] text-xs text-[#232323] py-4 px-20 items-center"
           />
         </form>
         <button
