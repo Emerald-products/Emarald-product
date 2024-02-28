@@ -75,7 +75,7 @@ const LogIn = () => {
         <button
           onClick={handleSubmit}
           type="submit"
-          className="w-full bg-[#3C1C6C] rounded-lg text-white py-2 font-thin"
+          className="w-full bg-[#3C1C6C] rounded-lg text-white my-2 py-2 font-thin"
         >
           Login
         </button>

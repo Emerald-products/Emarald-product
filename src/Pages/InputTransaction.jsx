@@ -18,7 +18,7 @@ const InputTransaction = ({ dataValue, onValueChange }) => {
       <h1 className="text-xl mb-4 text-[#232323]">
         We are glad to have you here!
       </h1>
-      <form action="" className="border-gray outline rounded-lg w-[50%]">
+      <form action="" className="">
         <input
           type="text"
           name=""
@@ -26,6 +26,7 @@ const InputTransaction = ({ dataValue, onValueChange }) => {
           placeholder="Enter this month income"
           value={dataValue}
           onChange={(e) => onValueChange(Number(e.target.value))}
+          className="border-gray-400 outline rounded-md w-[50%] h-10 px-6"
         />
       </form>
       <button
