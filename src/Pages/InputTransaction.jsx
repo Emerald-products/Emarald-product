@@ -26,7 +26,7 @@ const InputTransaction = ({ dataValue, onValueChange }) => {
           placeholder="Enter this month income"
           value={dataValue}
           onChange={(e) => onValueChange(Number(e.target.value))}
-          className="border-gray-400 outline rounded-md w-[50%] h-10 px-6"
+          className="border-gray-400 outline rounded-md max-w-64 w-full h-10 px-6"
         />
       </form>
       <button

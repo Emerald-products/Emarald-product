@@ -34,10 +34,10 @@ const SignUp = () => {
     console.log("Submitted:", { email, password });
   };
   return (
-    <div className="flex items-center px-8">
-      <div className="flex items-center justify-between gap-6">
-        <img src={people} alt="" className="hidden md:block" />
-        <form onSubmit={handleSubmit} className="w-full gap-4 mb-16">
+    <div className="px-8">
+      <div className="flex items-center justify-between gap-10 min-h-screen">
+        <img src={people} alt="" className="hidden lg:block max-h-full" />
+        <form onSubmit={handleSubmit} className="gap-4 mb-16">
           <div className="flex gap-2">
             <img
               src={logo}

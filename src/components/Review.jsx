@@ -5,7 +5,7 @@ import king from "../assets/king.jpg";
 const Review = () => {
   return (
     <div className="">
-      <h1 className="text-[#3f206f] font-semibold text-3xl px-auto">
+      <h1 className="text-[#3f206f] font-semibold text-3xl p-8 text-center ">
         What our customers are saying!
       </h1>
       <div className="text-[#232323] text-md px-10 mt-6 grid md:grid-cols-3 gap-4">
