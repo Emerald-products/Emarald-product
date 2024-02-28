@@ -24,8 +24,8 @@ const links = [
 const Hero = () => {
   const [nav, setNavBar] = useState(false);
   return (
-    <div className="flex gap-2 justify-between items-center h-20 sticky top-0 w-full pr-4 bg-white">
-      <h1 className="text-[#3C1C6C] text-3xl font-bold  cursor-pointer flex justify-between items-center h-20 ml-6 hover:scale-105 duration-300">
+    <div className="container flex gap-2 justify-between items-center h-20 sticky top-0 w-full bg-white">
+      <h1 className="text-[#3C1C6C] text-3xl font-bold  cursor-pointer flex justify-between items-center h-20 hover:scale-105 duration-300">
         EMERALD
       </h1>
       <ul className=" hidden md:flex ml-auto cursor-pointer">

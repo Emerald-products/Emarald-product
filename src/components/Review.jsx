@@ -4,11 +4,11 @@ import king from "../assets/king.jpg";
 
 const Review = () => {
   return (
-    <div className="">
+    <div className="container p-12">
       <h1 className="text-[#3f206f] font-semibold text-3xl p-8 text-center ">
         What our customers are saying!
       </h1>
-      <div className="text-[#232323] text-md px-10 mt-6 grid md:grid-cols-3 gap-4">
+      <div className="text-[#232323] text-md mt-6 grid md:grid-cols-3 gap-4">
         <div className="bg-[#f8f3ff] rounded-lg p-6 ">
           <p className="mt-4 mb-8 flex items-center justify-center">
             Emerald company is the best in the business for quenching every

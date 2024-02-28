@@ -7,17 +7,17 @@ import delivery from "../assets/SpeedTest.png";
 
 const Benefit = () => {
   return (
-    <div>
-      <div className="flex flex-col gap-1 items-center py-8 px-8 m-10 ">
+    <div className="container">
+      <div className="flex flex-col gap-1 items-center py-8 ">
         <h2 className="text-[#3C1C6C] text-2xl font-bold">
           The Benefits Of Using Our Products
         </h2>
-        <p className="text-[#52525B] text-xs font-light">
+        <p className="text-[#52525B] max-w-[400px] text-center text-xs font-light">
           Experience the ease of accessibility with our water services, ensuring
           that pure and refreshing hydration is effortlessly within your reach
         </p>
       </div>
-      <div className="grid md:grid-cols-3 gap-2 px-6 m-4">
+      <div className="grid md:grid-cols-3 gap-6 my-4">
         <div className="rounded-xl shadow-md px-4 py-2 hover:scale-105 duration-300">
           <img src={hand} alt="" sizes={20} />
           <h3 className="font-light text-md mt-3 mb-3">Pristine Water</h3>
