@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <div className="bg-[#3C1C6C] text-white px-6 pt-32 pb-48 gap-8 flex mt-10">
-      <div className="pl-6 max-w-72 mr-auto">
+    <div className="bg-[#3C1C6C] text-white px-12 pt-32 pb-48 gap-12 flex flex-col md:flex-row mt-10">
+      <div className="max-w-72 mr-auto">
         <h1 className="text-2xl font-bold mb-4">EMERALD</h1>
         <p className="">
           where simplicity meets security. Effortlessly manage and pay your
@@ -9,7 +9,7 @@ const Footer = () => {
         </p>
       </div>
 
-      <div className="px-10">
+      <div className="">
         <h5 className="text-xl font-bold mb-4">Company</h5>
         <ul className="text-sm mb-2">About Us</ul>
         <ul className="text-sm mb-2">Pricing</ul>
