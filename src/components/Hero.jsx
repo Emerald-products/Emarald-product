@@ -1,5 +1,6 @@
 import bgimage from "../assets/bgimage.png";
 import white from "../assets/white.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -15,11 +16,12 @@ const Hero = () => {
           From the source to your glass, we are committed to delivering crisp,
           refreshing goodness
         </p>
-        <a href="/SignUp">
-          <button className="bg-[#3C1C6C] text-white font-light py-2 px-8 rounded-md hover:scale-105 duration-300">
-            Get started
-          </button>
-        </a>
+        <Link
+          className="bg-[#3C1C6C] text-white font-light py-2 px-8 rounded-md hover:scale-105 duration-300"
+          to={"/SignUp"}
+        >
+          Get started
+        </Link>
       </div>
       <img
         src={white}

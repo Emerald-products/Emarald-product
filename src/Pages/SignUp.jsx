@@ -5,6 +5,7 @@ import logo from "../assets/logo.png";
 // import { createUserWithEmailAndPassword } from "firebase/app";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -69,9 +70,9 @@ const SignUp = () => {
             onChange={(e) => setPassword(e.target.value)}
             className="w-full border border-solid border-[#CED4DA] capitalize p-3 rounded-lg text-[#212529] mt-4"
           />
-          <a className="text-xs text-blue-600" href="/LogIn">
-            <p>Already have an account? login</p>
-          </a>
+          <Link className="text-xs text-blue-600" to={"/LogIn"}>
+            Already have an account? login
+          </Link>
           <button
             onSubmit={handleSubmit}
             className="bg-[#3C1C6C] text-white font-light py-2 px-10 rounded-lg mt-4 w-full"
