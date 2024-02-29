@@ -47,8 +47,8 @@ const labels = [
   "December",
 ];
 
+// eslint-disable-next-line react/prop-types
 export default function A({ dataValues }) {
-  console.log(dataValues);
   const getCurrentMonthData = useCallback(() => {
     const currentDate = new Date();
     const currentMonthIndex = currentDate.getMonth() + 1;

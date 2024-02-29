@@ -14,11 +14,11 @@ const Review = () => {
             Emerald company is the best in the business for quenching every
             thirst with excellence.
           </p>
-          <div className="flex mt-4 gap-3 font-light">
-            <img src={mask} alt="" className="" />
-            <div>
-              <p className="">Naomi wine store</p>
-              <h4>A wine store owner</h4>
+          <div className="flex mb-8 mt-6 gap-3 font-light">
+            <img src={mask} alt="" className="mt-6" />
+            <div className="mt-6">
+              <p className=" text-sm mb-2">Naomi wine store</p>
+              <h4 className="text-sm">A wine store owner</h4>
             </div>
           </div>
         </div>
@@ -28,10 +28,10 @@ const Review = () => {
             a delightful array of drinks, their service set the standard
           </p>
           <div className="flex mt-4 gap-3 font-light">
-            <img src={kingsley} alt="" className="rounded-[50%]" />
-            <div>
-              <p>Raymond Thusk</p>
-              <h4>professional freelancer</h4>
+            <img src={kingsley} alt="" className="rounded-[50%] mt-6" />
+            <div className="mt-6">
+              <p className=" text-sm mb-2">Deolu's Farm</p>
+              <h4 className="text-sm">Farm Manager</h4>
             </div>
           </div>
         </div>
@@ -40,10 +40,10 @@ const Review = () => {
           at frispes for almost 2 months because our office is still closed.
           During working at frispes, we feel a new experience.
           <div className="flex mt-4 gap-3 font-light">
-            <img src={king} alt="" className="rounded-[50%]" />
-            <div>
-              <p>Mr Sanni</p>
-              <h4>A Freelancer</h4>
+            <img src={king} alt="" className="rounded-[50%] mt-6" />
+            <div className="mt-6">
+              <p className=" text-sm mb-2">Mr Sanni</p>
+              <h4 className="text-sm">A Freelancer</h4>
             </div>
           </div>
         </div>

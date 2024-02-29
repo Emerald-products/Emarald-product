@@ -8,7 +8,7 @@ const Product = () => {
           <h3 className="text-4xl mb-8">
             Sip, Savor, and stay hydrated with our blend of smoothies
           </h3>
-          <p className="text-xs text-black mt-4 p-4 px-2 font-extralight">
+          <p className="text-xs text-black mt-4 mb-8 font-extralight">
             From the source to your glass, we are committed to delivering crisp,
             refreshing goodness
           </p>

@@ -16,14 +16,16 @@ const Footer = () => {
       </div>
       <div>
         <h5 className="text-xl font-bold mb-4">Legal</h5>
-        <ul className="mb-2 text-sm font">Privacy policy</ul>
+        <ul className="mb-2 text-sm">Privacy policy</ul>
         <ul className="mb-2">Terms of sevice</ul>
-        <ul className="">Complaints</ul>
+        <ul className="mb-2 text-sm">Complaints</ul>
       </div>
       <div>
         <h5 className="text-xl font-bold mb-4">About Emerald</h5>
-        <p>contact us info@emerald.com</p>
-        <p>opposit Mapoly filling station, liberty road, oke ado</p>
+        <p className="mb-2 text-sm">contact us info@emerald.com</p>
+        <p className="mb-2 text-sm">
+          opposit Mapoly filling station, liberty road, oke ado
+        </p>
       </div>
     </div>
   );

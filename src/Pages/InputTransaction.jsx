@@ -5,6 +5,12 @@ import { useNavigate } from "react-router-dom";
 const InputTransaction = ({ dataValue, onValueChange }) => {
   const navigate = useNavigate();
 
+  const handleSubmitInput = async (input) => {
+    await setDoc(salesCollection, {
+      amount: input,
+      created_at: new Date(),
+    });
+  };
   const handleLogOut = async () => {
     await signOut(auth);
     localStorage.removeItem("token");
@@ -28,10 +34,16 @@ const InputTransaction = ({ dataValue, onValueChange }) => {
           onChange={(e) => onValueChange(Number(e.target.value))}
           className="border-gray-400 outline rounded-md max-w-64 w-full h-10 px-6"
         />
+        <button
+          onClick={handleSubmitInput}
+          className="bg-[#3c1c6c] px-6 py-2 rounded-md"
+        >
+          Submit
+        </button>
       </div>
       <button
         onClick={handleLogOut}
-        className="py-2 px-6 rounded-lg bg-[#3c1c6D] mt-4 text-white"
+        className="py-2 px-6 rounded-lg bg-[#3c1c6c] mt-4 text-white"
       >
         Log out
       </button>
