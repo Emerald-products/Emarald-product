@@ -9,7 +9,7 @@ const Hero = () => {
       style={{ backgroundImage: `url(${bgimage})` }}
     >
       <div className="basis-[552px] flex-grow w-[474px]">
-        <h1 className="text-4xl py-8 ">
+        <h1 className="text-4xl py-8 font-semibold ">
           Quenching Thirst, Klen Water For A Healthier World.
         </h1>
         <p className="mb-4 mt-4 font-light text-[#53535B] text-xs">
