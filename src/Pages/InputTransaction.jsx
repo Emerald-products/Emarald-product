@@ -18,7 +18,7 @@ const InputTransaction = ({ dataValue, onValueChange }) => {
       <h1 className="text-xl mb-4 text-[#232323]">
         We are glad to have you here!
       </h1>
-      <form action="" className="">
+      <div>
         <input
           type="text"
           name=""
@@ -28,7 +28,7 @@ const InputTransaction = ({ dataValue, onValueChange }) => {
           onChange={(e) => onValueChange(Number(e.target.value))}
           className="border-gray-400 outline rounded-md max-w-64 w-full h-10 px-6"
         />
-      </form>
+      </div>
       <button
         onClick={handleLogOut}
         className="py-2 px-6 rounded-lg bg-[#3c1c6D] mt-4 text-white"

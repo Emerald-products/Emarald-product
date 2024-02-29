@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -47,33 +47,37 @@ const labels = [
   "December",
 ];
 
-export default function A({ dataValue }) {
-  const getCurrentMonthData = () => {
+export default function A({ dataValues }) {
+  console.log(dataValues);
+  const getCurrentMonthData = useCallback(() => {
     const currentDate = new Date();
-    const currentMonthIndex = currentDate.getMonth();
-    const currentMonthLabel = labels[currentMonthIndex];
+    const currentMonthIndex = currentDate.getMonth() + 1;
+
+    const getLabelTillCurrentMonth = () => {
+      return labels.slice(0, currentMonthIndex);
+    };
 
     return {
-      labels: [currentMonthLabel],
+      labels: getLabelTillCurrentMonth(),
       datasets: [
-        {
-          label: "Dataset 1",
-          data: [dataValue],
-          backgroundColor: "rgba(163, 147, 191)",
-        },
+        // {
+        //   label: "Dataset 1",
+        //   data: [dataValue],
+        //   backgroundColor: "rgba(163, 147, 191)",
+        // },
         {
           label: "Dataset 2",
-          data: [dataValue],
+          data: dataValues,
           backgroundColor: "rgba(60, 28, 109)",
         },
       ],
     };
-  };
-  const [data, setData] = useState(getCurrentMonthData(dataValue));
+  }, [dataValues]);
+  const [data, setData] = useState(getCurrentMonthData());
 
   useEffect(() => {
-    setData(getCurrentMonthData(dataValue));
-  }, [dataValue]);
+    setData(getCurrentMonthData());
+  }, [getCurrentMonthData]);
 
   return <Bar className="" options={options} data={data} />;
 }

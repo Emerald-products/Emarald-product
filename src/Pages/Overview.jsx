@@ -8,7 +8,7 @@ const Transactions = () => {
   return (
     <div>
       <InputTransaction value={valueChart} onValueChange={setValueChart} />
-      <Chart dataValue={valueChart} />
+      <Chart dataValues={[0, valueChart]} />
     </div>
   );
 };
