@@ -5,11 +5,8 @@ import { useNavigate } from "react-router-dom";
 const InputTransaction = ({ dataValue, onValueChange }) => {
   const navigate = useNavigate();
 
-  const handleSubmitInput = async (input) => {
-    await setDoc(salesCollection, {
-      amount: input,
-      created_at: new Date(),
-    });
+  const handleSubmitInput = async (e) => {
+    e.preventDefault();
   };
   const handleLogOut = async () => {
     await signOut(auth);
@@ -26,6 +23,7 @@ const InputTransaction = ({ dataValue, onValueChange }) => {
       </h1>
       <div>
         <input
+          onSubmit={handleSubmitInput}
           type="text"
           name=""
           id="Transaction"
