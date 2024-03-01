@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect, useCallback } from "react";
 import {
   Chart as ChartJS,
@@ -27,7 +28,7 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Chart.js Bar Chart",
+      text: "Sales by month",
     },
   },
 };
@@ -47,18 +48,10 @@ const labels = [
   "December",
 ];
 
-// eslint-disable-next-line react/prop-types
 export default function A({ dataValues }) {
   const getCurrentMonthData = useCallback(() => {
-    const currentDate = new Date();
-    const currentMonthIndex = currentDate.getMonth() + 1;
-
-    const getLabelTillCurrentMonth = () => {
-      return labels.slice(0, currentMonthIndex);
-    };
-
     return {
-      labels: getLabelTillCurrentMonth(),
+      labels: dataValues.map((value) => value.id.split("-")[0]),
       datasets: [
         // {
         //   label: "Dataset 1",
@@ -66,18 +59,13 @@ export default function A({ dataValues }) {
         //   backgroundColor: "rgba(163, 147, 191)",
         // },
         {
-          label: "Dataset 2",
-          data: dataValues,
+          label: "Product Sales Per Month",
+          data: dataValues.map((value) => value.amount),
           backgroundColor: "rgba(60, 28, 109)",
         },
       ],
     };
   }, [dataValues]);
-  const [data, setData] = useState(getCurrentMonthData());
 
-  useEffect(() => {
-    setData(getCurrentMonthData());
-  }, [getCurrentMonthData]);
-
-  return <Bar className="" options={options} data={data} />;
+  return <Bar className="" options={options} data={getCurrentMonthData()} />;
 }

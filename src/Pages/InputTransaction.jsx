@@ -1,18 +1,12 @@
-import { signOut } from "firebase/auth";
-import { auth } from "../../firebase";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-const InputTransaction = ({ dataValue, onValueChange }) => {
-  const navigate = useNavigate();
-
+// eslint-disable-next-line react/prop-types
+const InputTransaction = ({ handleSubmit, isSubmitting }) => {
+  const [input, setInput] = useState("");
   const handleSubmitInput = async (e) => {
     e.preventDefault();
-  };
-  const handleLogOut = async () => {
-    await signOut(auth);
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    navigate("/Login");
+    handleSubmit(Number(input));
+    setInput("");
   };
 
   return (
@@ -21,30 +15,24 @@ const InputTransaction = ({ dataValue, onValueChange }) => {
       <h1 className="text-xl mb-4 text-[#232323]">
         We are glad to have you here!
       </h1>
-      <div>
+      <form className="flex flex-col items-start" onSubmit={handleSubmitInput}>
         <input
-          onSubmit={handleSubmitInput}
-          type="text"
+          type="number"
           name=""
           id="Transaction"
           placeholder="Enter this month income"
-          value={dataValue}
-          onChange={(e) => onValueChange(Number(e.target.value))}
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
           className="border-gray-400 outline rounded-md max-w-64 w-full h-10 px-6"
         />
         <button
-          onClick={handleSubmitInput}
-          className="bg-[#3c1c6c] px-6 py-2 rounded-md"
+          disabled={isSubmitting}
+          type="submit"
+          className="py-2 px-6 rounded-lg bg-[#3c1c6c] mt-4 text-white"
         >
-          Submit
+          {isSubmitting ? "Submitting..." : "Submit"}
         </button>
-      </div>
-      <button
-        onClick={handleLogOut}
-        className="py-2 px-6 rounded-lg bg-[#3c1c6c] mt-4 text-white"
-      >
-        Log out
-      </button>
+      </form>
     </div>
   );
 };
