@@ -24,7 +24,7 @@ const Footer = () => {
         <h5 className="text-xl font-bold mb-4">About Emerald</h5>
         <p className="mb-2 text-sm">contact us info@emerald.com</p>
         <p className="mb-2 text-sm">
-          opposit Bopoy filling station, liberty road, oke ado
+          opposite Bopoy filling station, liberty road, oke ado
         </p>
       </div>
     </div>

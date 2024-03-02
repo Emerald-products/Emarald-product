@@ -49,7 +49,7 @@ const LogIn = () => {
         </p>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col rounded mt-6 w-full items-center"
+          className="flex flex-col rounded mt-6 w-full"
         >
           <label className="pr-4" htmlFor="">
             Email
@@ -58,7 +58,7 @@ const LogIn = () => {
             type="text"
             value={email}
             onChange={handleUseremailChange}
-            placeholder="Email address"
+            placeholder="Email Address"
             className="border-[#D9D9D9] rounded-lg w-full bg-[#D9D9D9] text-xs text-[#232323] py-4 pl-4 mb-2 pr-7"
           />
           <label className="pr-4" htmlFor="">

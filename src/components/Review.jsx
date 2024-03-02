@@ -1,4 +1,4 @@
-import mask from "../assets/Mask group.jpg";
+import mask from "../assets/Mask group.png";
 import kingsley from "../assets/kingsley-osei-abrah-9KmzY22Tz-4-unsplash 1.jpg";
 import king from "../assets/king.jpg";
 
@@ -17,7 +17,7 @@ const Review = () => {
           <div className="flex mb-8 mt-6 gap-3 font-light">
             <img src={mask} alt="" className="mt-6" />
             <div className="mt-6">
-              <p className=" text-sm mb-2">Naomi wine store</p>
+              <p className=" text-sm mb-1">Naomi wine store</p>
               <h4 className="text-sm">A wine store owner</h4>
             </div>
           </div>
@@ -30,7 +30,7 @@ const Review = () => {
           <div className="flex mt-4 gap-3 font-light">
             <img src={kingsley} alt="" className="rounded-[50%] mt-6" />
             <div className="mt-6">
-              <p className=" text-sm mb-2">Deolu's Farm</p>
+              <p className=" text-sm mb-1">Deolu's Farm</p>
               <h4 className="text-sm">Farm Manager</h4>
             </div>
           </div>
@@ -42,8 +42,8 @@ const Review = () => {
           <div className="flex mt-4 gap-3 font-light">
             <img src={king} alt="" className="rounded-[50%] mt-6" />
             <div className="mt-6">
-              <p className=" text-sm mb-2">Mr Sanni</p>
-              <h4 className="text-sm">A Freelancer</h4>
+              <p className=" text-sm mb-1">Mr Sanni</p>
+              <h4 className="text-sm">A Professional Freelancer</h4>
             </div>
           </div>
         </div>
